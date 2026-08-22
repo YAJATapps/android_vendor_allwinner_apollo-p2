@@ -1,0 +1,140 @@
+// Prebuilt Mesa3D libraries for Panfrost (Mali-G31) on Allwinner H618
+
+cc_prebuilt_library_shared {
+    name: "libgallium_dri",
+    vendor: true,
+    compile_multilib: "64",
+    srcs: ["libgallium_dri.so"],
+    shared_libs: [
+        "libdrm_panfrost",
+        "liblog",
+        "libcutils",
+        "libnativewindow",
+        "libsync",
+        "libz",
+    ],
+    check_elf_files: false,
+    prefer: true,
+    strip: {
+        none: true,
+    },
+}
+
+// ────────────────────────────────────────────────────────────────
+// GBM — Generic Buffer Management
+// Installs as /vendor/lib64/libgbm_mesa.so
+// No stem property = zero Kati/Make output collision with minigbm/libgbm
+// ────────────────────────────────────────────────────────────────
+cc_prebuilt_library_shared {
+    name: "libgbm_mesa",
+    vendor: true,
+    compile_multilib: "64",
+    srcs: ["libgbm_mesa.so"],
+    shared_libs: [
+        "libdrm_panfrost",
+        "liblog",
+    ],
+    check_elf_files: false,
+    prefer: true,
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libdrm_panfrost",
+    vendor: true,
+    compile_multilib: "64",
+    srcs: ["libdrm.so"],
+    shared_libs: [
+        "liblog",
+    ],
+    check_elf_files: false,
+    prefer: true,
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libEGL_mesa",
+    stem: "libEGL_mesa",
+    vendor: true,
+    compile_multilib: "64",
+    relative_install_path: "egl",
+    srcs: ["libEGL.so"],
+    shared_libs: [
+        "libgallium_dri",
+        "libgbm_mesa",
+        "libdrm_panfrost",
+        "liblog",
+        "libcutils",
+        "libnativewindow",
+        "libsync",
+    ],
+    check_elf_files: false,
+    prefer: true,
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libGLESv1_CM_mesa",
+    stem: "libGLESv1_CM_mesa",
+    vendor: true,
+    compile_multilib: "64",
+    relative_install_path: "egl",
+    srcs: ["libGLESv1_CM.so"],
+    shared_libs: [
+        "libEGL_mesa",
+        "libgallium_dri",
+        "liblog",
+    ],
+    check_elf_files: false,
+    prefer: true,
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libGLESv2_mesa",
+    stem: "libGLESv2_mesa",
+    vendor: true,
+    compile_multilib: "64",
+    relative_install_path: "egl",
+    srcs: ["libGLESv2.so"],
+    shared_libs: [
+        "libEGL_mesa",
+        "libgallium_dri",
+        "liblog",
+    ],
+    check_elf_files: false,
+    prefer: true,
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "vulkan.panfrost",
+    vendor: true,
+    compile_multilib: "64",
+    relative_install_path: "hw",
+    srcs: ["libvulkan_panfrost.so"],
+    shared_libs: [
+        "libgallium_dri",
+        "libdrm_panfrost",
+        "liblog",
+        "libcutils",
+        "libnativewindow",
+        "libsync",
+        "libhardware",
+    ],
+    check_elf_files: false,
+    prefer: true,
+    strip: {
+        none: true,
+    },
+}
