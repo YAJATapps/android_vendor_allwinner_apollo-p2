@@ -5,8 +5,4 @@
 //
 
 soong_namespace {
-    imports: [
-        "vendor/allwinner/apollo-p2/proprietary/mesa",
-        "vendor/allwinner/apollo-p2/proprietary/modules",
-    ],
 }

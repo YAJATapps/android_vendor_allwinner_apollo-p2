@@ -6,8 +6,7 @@
 
 # Namespaces for Soong prebuilts
 PRODUCT_SOONG_NAMESPACES += \
-    vendor/allwinner/apollo-p2/proprietary/mesa \
-    vendor/allwinner/apollo-p2/proprietary/modules
+    vendor/allwinner/apollo-p2
 
 # Wi-Fi & Bluetooth Firmware
 PRODUCT_COPY_FILES += \
