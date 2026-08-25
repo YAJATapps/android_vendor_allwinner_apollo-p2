@@ -26,4 +26,5 @@ PRODUCT_PACKAGES += \
     libGLESv2_mesa \
     libgallium_dri \
     libgbm_mesa \
-    vulkan.panfrost
+    dri_gbm
+#    vulkan.panfrost

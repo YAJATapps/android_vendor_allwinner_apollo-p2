@@ -42,6 +42,23 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "dri_gbm",
+    vendor: true,
+    compile_multilib: "64",
+    srcs: ["dri_gbm.so"],
+    shared_libs: [
+        "libgallium_dri",
+        "libdrm_panfrost",
+        "liblog",
+    ],
+    check_elf_files: false,
+    prefer: true,
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
     name: "libdrm_panfrost",
     vendor: true,
     compile_multilib: "64",
