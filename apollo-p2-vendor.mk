@@ -19,7 +19,7 @@ PRODUCT_PACKAGES += \
     sprdwl_ng.ko \
     sprdbt_tty.ko
 
-# Mesa3D Panfrost / GLES / EGL / Vulkan Prebuilts
+# Mesa3D Panfrost / GLES / EGL Prebuilts
 PRODUCT_PACKAGES += \
     libEGL_mesa \
     libGLESv1_CM_mesa \
@@ -27,4 +27,3 @@ PRODUCT_PACKAGES += \
     libgallium_dri \
     libgbm_mesa \
     dri_gbm
-#    vulkan.panfrost
