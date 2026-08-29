@@ -25,9 +25,11 @@ This repository contains prebuilt proprietary firmware blobs, out-of-tree kernel
 ---
 
 ## 3. Mesa3D Panfrost (Mali-G31) Graphics Acceleration Prebuilts
+- **Version**: Mesa 26.2.1 (Release)
 - **Source**: Built out-of-tree using the standalone cross-compilation pipeline script:
   - Gist: [https://gist.github.com/YAJATapps/5c84e42a097646dcf497dcad9801fa8e](https://gist.github.com/YAJATapps/5c84e42a097646dcf497dcad9801fa8e)
 - **Components**:
   - `libgallium_dri.so`: Gallium Panfrost driver (`/vendor/lib64/libgallium_dri.so`)
   - `libgbm_mesa.so` / `dri_gbm.so`: Mesa GBM buffer allocation backends
   - `libEGL.so`, `libGLESv1_CM.so`, `libGLESv2.so`: OpenGL ES 1.1 / 2.0 / 3.1 drivers (`/vendor/lib64/egl/`)
+
