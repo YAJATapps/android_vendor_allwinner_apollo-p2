@@ -1,6 +1,6 @@
 # Proprietary Vendor Blobs for Allwinner H618 (Apollo P2 / Orange Pi Zero 2W)
 
-This repository contains prebuilt proprietary firmware blobs, out-of-tree kernel modules, and graphics acceleration libraries required for LineageOS 23.2 on Allwinner H618 devices.
+This repository contains prebuilt proprietary firmware blobs, out-of-tree kernel modules, and graphics acceleration libraries required for LineageOS 24 on Allwinner H618 devices.
 
 ---
 
@@ -25,7 +25,7 @@ This repository contains prebuilt proprietary firmware blobs, out-of-tree kernel
 ---
 
 ## 3. Mesa3D Panfrost (Mali-G31) Graphics Acceleration Prebuilts
-- **Version**: Mesa 26.2.1 (Release)
+- **Version**: Mesa 26.2.4 (Release)
 - **Source**: Built out-of-tree using the standalone cross-compilation pipeline script:
   - Gist: [https://gist.github.com/YAJATapps/5c84e42a097646dcf497dcad9801fa8e](https://gist.github.com/YAJATapps/5c84e42a097646dcf497dcad9801fa8e)
 - **Components**:
