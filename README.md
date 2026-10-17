@@ -1,6 +1,6 @@
 # Proprietary Vendor Blobs for Allwinner H618 (Apollo P2 / Orange Pi Zero 2W)
 
-This repository contains prebuilt proprietary firmware blobs, out-of-tree kernel modules, and graphics acceleration libraries required for LineageOS 24 on Allwinner H618 devices.
+This repository contains prebuilt proprietary firmware blobs, out-of-tree kernel modules, and graphics acceleration libraries required for LineageOS 24 (Android 17) on Allwinner H618 devices.
 
 ---
 
